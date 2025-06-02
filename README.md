@@ -8,17 +8,20 @@
   在terminal运行
   ```bash
   ollama run mistral
+  ```
 
 ### 准备文件
 下载文件夹 CMD：
 ```bash
 cd ./desktop
 github clone https://github.com/Guilin-Jiang/law_chatbot
+```
 
 ### 开始运行
 ```bash
 cd ./law_chatbot
 docker-compose up --build
+```
 
 ### 本地测试效果
 open URL http://0.0.0.0:8501
@@ -29,9 +32,11 @@ law_chatbot/
 │   ├── main.py            # FastAPI 接口服务
 │   ├── rag_chain.py       # RAG 构建逻辑
 │   ├── load_documents.py  # 加载并嵌入法律文件
+├── data/
+│   ├── leagl_documents    # 美国宪法的pdf
 ├── streamlit_app.py       # 前端页面逻辑
 ├── run.sh                 # 启动脚本
 ├── Dockerfile             # 构建镜像
-├── docker-compose.yml     # 容器编排
+├── docker-compose.yml     # 容器管理
 ├── requirements.txt       # 依赖列表
 └── README.md              # 项目说明文档

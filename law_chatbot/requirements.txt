@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+ollama
+streamlit
+faiss-cpu
+transformers
+torch
+PyPDF2
+requests 

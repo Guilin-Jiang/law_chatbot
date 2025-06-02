@@ -1,4 +1,4 @@
-# law_chatbot(1.0)(Streamlit+FastAPI+Langchain+RAG+OllamaMistral)
+# law_chatbot(v1.0)(Streamlit+FastAPI+Langchain+RAG+OllamaMistral)
 这是一个简易的法律助手chatbot，基于提供的美国宪法pdf，做RAG，但只能一次的Q&A。
 用Streamlit做前端简易的UI交互，用fastapi做前端和后端的中间层API，用langchain作为chatbot架构，下载ollama下的mistial模型到本地。
 未来添加功能方向：多次对话，对话记录保留和展示，登录权限,etc

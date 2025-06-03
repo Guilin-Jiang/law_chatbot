@@ -3,6 +3,22 @@
 用Streamlit做前端简易的UI交互，用fastapi做前端和后端的中间层API，用langchain作为chatbot架构，下载ollama下的mistial模型到本地。
 未来添加功能方向：多次对话，对话记录保留和展示，登录权限,etc
 
+#####
+```text
+| 功能类别     | 功能名称                       | 意义                        | 技术关键词                                                       |
+| -------- | -------------------------- | ------------------------- | ----------------------------------------------------------- |
+| 🧠 对话能力  | ✅ 多轮对话记忆                   | 支持上下文跟进提问（如“那它是哪一年生效的？”）  | LangChain `ConversationBufferMemory` / `ChatMessageHistory` |
+| 📚 知识管理  | ✅ 多文档支持                    | 处理多个法律文档，如美国宪法 + 州法 + 案例法 | LangChain DocumentLoader + 文档metadata                       |
+| 🔍 精准控制  | ✅ 引用出处（source attribution） | 返回哪一条法律内容、哪一页PDF          | `return_source_documents=True`                              |
+| 🧩 交互体验  | ✅ 用户反馈按钮                   | 用户可标记回答“满意 / 不满意”         | Streamlit按钮 + 本地日志记录                                        |
+| 💬 控制生成  | ✅ 模型温度/长度控制                | UI允许用户设置回答风格（简洁/详细）       | Streamlit表单 + OpenAI/Mistral参数调节                            |
+| 🛠️ 文本能力 | ✅ 答案重写/纠错                  | 对生成的答案重新措辞或修复语义逻辑         | 二次调用LLM + prompt改写                                          |
+| 🗃️ 结构功能 | ✅ 会话历史查看                   | 显示用户和Bot的聊天记录             | Streamlit会话state / local JSON                               |
+| 🔐 安全边界  | ✅ 限制非法问题                   | 防止用户问与法律无关的内容             | 规则判断 or 分类模型过滤                                              |
+| 🧪 工程能力  | ✅ 自动化测试接口                  | 对 API 提交合法问题，验证输出         | FastAPI TestClient / pytest                                 |
+| 🚀 性能优化  | ✅ 嵌入缓存                     | 对相同问题不重复嵌入，提高速度           | FAISS / SQLite 缓存向量或LangChain Retriever Cache               |
+```
+
 ## 上手试试吧！快速开始！
 #### 需要提前下载
 1.Docker(https://www.docker.com/)
